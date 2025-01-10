@@ -1,0 +1,378 @@
+body {
+    margin: 0;
+    /* font-family: Arial, sans-serif; */
+    
+    background-color: #f8f9fa; /* Hafif gri arka plan */
+    width: calc(100% - 300px); /* Sağdan ve soldan 100px boşluk */
+    margin: 0 auto; /* Ortalamak için */
+    max-width: 1200px; /* Daha geniş ekranlarda aşırı genişlemesini önler */
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Custom Container */
+.custom-container {
+    position: relative;
+}
+
+/* Header */
+.main-header {
+    position: fixed; /* Sayfanın en üstünde sabit kalmasını sağlar */
+    top: 0; /* En üste yapıştırır */
+    left: 50%; /* Yatayda ortalamak için */
+    transform: translateX(-50%); /* Yatayda ortalamak için */
+    width: calc(100% - 300px); /* Body genişliği ile aynı */
+    max-width: 1200px; /* Body maksimum genişliği ile aynı */
+    z-index: 1000; /* Diğer öğelerin üzerinde kalmasını sağlar */
+    background-color: rgba(126, 18, 8, 1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: top 0.3s ease;
+    padding: 10px 0;
+}
+.header-right {
+    display: flex;
+    align-items: center;
+}
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.logo-image {
+    width: 100px;
+    height: auto;
+}
+
+.menu-icon {
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 100;
+}
+
+.menu-icon .hamburger,
+.menu-icon .close {
+    font-size: 2rem;
+    color: #ffff;
+    display: inline-block;
+}
+.menu-icon .close {
+    display: none; /* Initially, hide close icon */
+}
+.menu-icon .hamburger {
+    display: inline-block;
+}
+
+
+
+/* Fullscreen Menu */
+
+.fullscreen-menu {
+    position: fixed;
+    top: 0; /* Top page */
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: top 0.5s ease, transform 0.5s ease; /* Üstten aşağıya animasyon */
+    transform: translateY(-100%); /* Başlangıçta gizli */
+}
+.fullscreen-menu.open {
+    top: 0; /* Slide down into view */
+    transform: translateY(0); /* Görünür hale getir */
+}
+
+.fullscreen-menu .menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.fullscreen-menu .menu-list li {
+    margin: 20px 0;
+}
+
+.fullscreen-menu .menu-list li a {
+    color: white;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.fullscreen-menu .menu-list li a:hover {
+    color: #7e1208;
+}
+
+/* Slider */
+
+.carousel {
+    overflow: hidden; /* Sayfa başka bir şeyleri göstermeyecek */
+    height: 700px;
+}
+.carousel p {
+font-size: 1.3rem;
+
+}
+
+.carousel-item img {
+    height: 700px; /* Resim slider alanını doldurur */
+    object-fit: cover; /* Resim düzgün bir şekilde kırpılır */
+    
+}
+.carousel-caption {
+    bottom: 10%; /* Başlık ve içerik biraz yukarıda durur */
+    background-color: rgba(0, 0, 0, 0.4); /* Overlay black */
+}
+
+/* Duyarlı Tasarım - Medya Sorguları */
+@media (max-width: 1024px) {
+    body {
+        width: 100%;
+    }
+    .main-header{
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    
+    .main-header{
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        width: 100%;
+    }
+    .main-header{
+        width: 100%;
+    }
+    .carousel {
+        height: 200px; /* Mobil cihazlar için daha küçük yükseklik */
+    }
+
+    .carousel-caption {
+        font-size: 12px; /* Başlık boyutunu küçült */
+    }
+}
+
+
+/* Events Area */
+.event-section{
+    background-color: rgb(248, 247, 246);
+    width: 100%;
+    text-align: left;
+    padding: 10px 0px 5px 50px;
+    border-bottom:black solid 2px;
+}
+.event-date-ort{
+    font-size: 1.3rem;
+}
+.event-title{
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+.btn-program{
+    color: white;
+    background-color: #7e1208;
+    border-radius: 5px;
+    padding: 10px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin:20px 10px ;
+    font-weight: bold;
+    font-size: 1.3rem;
+    width: 50%;
+}
+.btn-program:hover{
+    background-color: #BD4E4E;
+    color: white;
+}
+
+.card-thumbnails{           /*Here for card images */
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}    
+
+/* Overlay Styling */
+.overlay {
+    background-color: rgba(0, 0, 0, 0.4); /* Overlay black */
+    z-index: 1;
+    color: white;
+}
+
+/* Make text standout on overlay */
+.overlay h1,
+.overlay p {
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* Ensure image stays behind overlay */
+.position-relative img {
+    z-index: 0;
+}
+
+.btn-bar{           /* here for "Red claim" Buttons */
+    color: white;
+    background-color: #7e1208;
+    padding: 10px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 1.3rem;
+    height: 70px;
+    border-radius: 0;
+    margin-bottom: 30px;
+}
+.btn-bar:hover{
+    background-color: #BD4E4E;
+    color: white;
+    
+}
+.btn-bar-blue{      /* here for "claim" Buttons */
+    color: white;
+    background-color: #2F528F;
+    padding: 10px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 1.3rem;
+    height: 70px;
+    border-radius: 0;
+    margin-bottom: 30px;
+}
+
+.btn-bar-blue:hover{
+    background-color: #708CBC;
+    color: white;
+}
+
+.btn-program-blue{     /* Here for Blue program button */
+    color: white;
+    background-color: #2F528F;
+    border-radius: 5px;
+    padding: 10px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin:20px 10px ;
+    font-weight: bold;
+    font-size: 1.3rem;
+    width: 50%;
+}
+.btn-program-blue:hover{
+    background-color: #708CBC;
+    color: white;
+}
+.img-header{
+    object-fit: cover;
+    width: 100%;
+    max-height: 700px;
+}
+
+.paragraph-img{
+    font-size: 1.3rem;
+    margin: 30px;
+}
+
+.btn-Digitales-type1{
+background-color: #50701D;
+color: white;
+font-weight: bold;
+font-size: 1.5rem;
+}
+
+.btn-Digitales-type1:hover{
+    background-color: #B3CD89;
+    color: white;
+    }
+
+.btn-Digitales-type2{
+    background-color: white;
+    color: #50701D;
+    font-weight: bold;
+    font-size: 1.3rem;
+    margin: 20px;
+}
+
+
+.btn-Digitales-type2:hover{
+    background-color: #B3CD89;
+    color: white;
+    }
+
+.overlay-green{
+        background-color: rgba(0, 100, 0, 0.4); /* Overlay Green */
+        z-index: 1;
+        color: white;
+}
+.overlay-yellow{
+    background-color: rgb(248, 228, 3, 0.4); /* Overlay Green */
+    z-index: 1;
+    color: white;
+}
+.btn-generationenfestival{
+    background-color: orange;
+    color: white;
+    font-weight: bold;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.btn-generationenfestival:hover{
+    background-color: white;
+    color: orange;
+    font-weight: bold;
+}
+
+.overlay-red{
+    background-color: rgba(255, 0, 0, 0.2); /* Overlay Green */
+    z-index: 1;
+    color: white;
+}
+
+.btn-red{
+    background-color: #7e1208;
+    color: white;
+    font-weight: bold;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+.btn-red:hover{
+    background-color: white;
+    color: #7e1208;
+    font-weight: bold;
+}
+
+.footer {
+    background-color: #7e1208;
+    color: white;
+    width: 100%;
+}
+
+.img-footer-logo{
+    max-width: 50px; /* İkon boyutu */
+    height: auto;
+    margin-bottom: 5px;
+}
+
+.logo-partners{
+    max-width: 100%; /* Destekçi logoları boyutu */
+    height: auto;
+}
+footer h5 {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+footer p, footer a {
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
