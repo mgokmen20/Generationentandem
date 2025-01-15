@@ -2,10 +2,10 @@ body {
     margin: 0;
     /* font-family: Arial, sans-serif; */
     
-    background-color: #f8f9fa; /* Hafif gri arka plan */
-    width: calc(100% - 300px); /* Sağdan ve soldan 100px boşluk */
-    margin: 0 auto; /* Ortalamak için */
-    max-width: 1200px; /* Daha geniş ekranlarda aşırı genişlemesini önler */
+    background-color: #f8f9fa; 
+    width: calc(100% - 300px); 
+    margin: 0 auto; /* For middle */
+    max-width: 1200px; 
     font-family: 'Roboto', sans-serif;
 }
 
@@ -16,13 +16,13 @@ body {
 
 /* Header */
 .main-header {
-    position: fixed; /* Sayfanın en üstünde sabit kalmasını sağlar */
-    top: 0; /* En üste yapıştırır */
-    left: 50%; /* Yatayda ortalamak için */
-    transform: translateX(-50%); /* Yatayda ortalamak için */
-    width: calc(100% - 300px); /* Body genişliği ile aynı */
-    max-width: 1200px; /* Body maksimum genişliği ile aynı */
-    z-index: 1000; /* Diğer öğelerin üzerinde kalmasını sağlar */
+    position: fixed; /* always stay on Top */
+    top: 0; 
+    left: 50%; /* to center horizontally */
+    transform: translateX(-50%); /* to center horizontally */
+    width: calc(100% - 300px); /* Same as body width */
+    max-width: 1200px;
+    z-index: 1000; 
     background-color: rgba(126, 18, 8, 1);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: top 0.3s ease;
@@ -86,7 +86,7 @@ body {
 }
 .fullscreen-menu.open {
     top: 0; /* Slide down into view */
-    transform: translateY(0); /* Görünür hale getir */
+    transform: translateY(0); /* Make it visible */
 }
 
 .fullscreen-menu .menu-list {
@@ -114,7 +114,7 @@ body {
 /* Slider */
 
 .carousel {
-    overflow: hidden; /* Sayfa başka bir şeyleri göstermeyecek */
+    overflow: hidden; /* The page will not show anything else */
     height: 700px;
 }
 .carousel p {
@@ -123,47 +123,16 @@ font-size: 1.3rem;
 }
 
 .carousel-item img {
-    height: 700px; /* Resim slider alanını doldurur */
-    object-fit: cover; /* Resim düzgün bir şekilde kırpılır */
+    height: 700px; /* Image fills the slider area */
+    object-fit: cover; /* The image is cropped properly */
     
 }
 .carousel-caption {
-    bottom: 10%; /* Başlık ve içerik biraz yukarıda durur */
+    bottom: 10%; /* Header Position*/
     background-color: rgba(0, 0, 0, 0.4); /* Overlay black */
 }
 
-/* Duyarlı Tasarım - Medya Sorguları */
-@media (max-width: 1024px) {
-    body {
-        width: 100%;
-    }
-    .main-header{
-        width: 100%;
-    }
-}
 
-@media (max-width: 768px) {
-    
-    .main-header{
-        width: 100%;
-    }
-}
-
-@media (max-width: 480px) {
-    body {
-        width: 100%;
-    }
-    .main-header{
-        width: 100%;
-    }
-    .carousel {
-        height: 200px; /* Mobil cihazlar için daha küçük yükseklik */
-    }
-
-    .carousel-caption {
-        font-size: 12px; /* Başlık boyutunu küçült */
-    }
-}
 
 
 /* Events Area */
@@ -298,10 +267,9 @@ font-size: 1.5rem;
     background-color: white;
     color: #50701D;
     font-weight: bold;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     margin: 20px;
 }
-
 
 .btn-Digitales-type2:hover{
     background-color: #B3CD89;
@@ -314,7 +282,7 @@ font-size: 1.5rem;
         color: white;
 }
 .overlay-yellow{
-    background-color: rgb(248, 228, 3, 0.4); /* Overlay Green */
+    background-color: rgb(248, 228, 3, 0.4); /* Overlay Yellow */
     z-index: 1;
     color: white;
 }
@@ -333,7 +301,7 @@ font-size: 1.5rem;
 }
 
 .overlay-red{
-    background-color: rgba(255, 0, 0, 0.2); /* Overlay Green */
+    background-color: rgba(255, 0, 0, 0.2); /* Overlay Red */
     z-index: 1;
     color: white;
 }
@@ -358,13 +326,13 @@ font-size: 1.5rem;
 }
 
 .img-footer-logo{
-    max-width: 50px; /* İkon boyutu */
+    max-width: 50px; /* Icon size */
     height: auto;
     margin-bottom: 5px;
 }
 
 .logo-partners{
-    max-width: 100%; /* Destekçi logoları boyutu */
+    max-width: 100%; /* Supporter logos size */
     height: auto;
 }
 footer h5 {
@@ -375,4 +343,51 @@ footer h5 {
 footer p, footer a {
     font-size: 0.9rem;
     line-height: 1.5;
+    text-decoration: none;
+    color: white;
+}
+.footer-bottom{
+    background-color: #7e1208; 
+    width: 100%; 
+    color: white; 
+    margin-bottom: 10px; 
+    padding: 20px;
+}
+.footer-bottom a{
+    text-decoration: none;
+    color: white;
+}
+
+/* Relative design Media Query */
+@media (max-width: 1024px) {
+    body {
+        width: 100%;
+    }
+    .main-header{
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    
+    .main-header{
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        width: 100%;
+    }
+    .main-header{
+        width: 100%;
+    }
+    .carousel {
+        height: 200px; 
+    }
+
+    .carousel-caption {
+        font-size: 12px; 
+    }
+
 }

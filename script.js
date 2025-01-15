@@ -26,18 +26,18 @@ menuIcon.addEventListener('click', function() {
 /* Here for Bootstrap slider stop with mauseover*/
   var myCarousel = document.getElementById('carouselExampleCaptions');
   var carousel = new bootstrap.Carousel(myCarousel, {
-    interval: 2000, // Otomatik geçiş süresi (2 saniye)
-    ride: 'carousel' // Otomatik olarak başlat
+    interval: 2000, // Automatic switching time (2 seconds)
+    ride: 'carousel' // Start automatically
   });
 
-  // Fare ile üzerine gelince durdurma
+  // Stopping on mouse hover
   myCarousel.addEventListener('mouseenter', function () {
-    carousel.pause(); // Otomatik geçişi durdur
+    carousel.pause(); // Stop automatic switching
   });
 
-  // Fare ayrıldığında tekrar başlatma
+  // Restart when mouse is separated
   myCarousel.addEventListener('mouseleave', function () {
-    carousel.cycle(); // Otomatik geçişi başlat
+    carousel.cycle(); // Start automatic migration
   });
 
 
