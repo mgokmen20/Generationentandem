@@ -69,7 +69,7 @@ body {
 
 .fullscreen-menu {
     position: fixed;
-    top: 0; /* Top page */
+    top: 0;
     left: 0;
     width: 100%;
     height: 100%;
@@ -81,14 +81,13 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    transition: top 0.5s ease, transform 0.5s ease; /* Üstten aşağıya animasyon */
-    transform: translateY(-100%); /* Başlangıçta gizli */
-}
-.fullscreen-menu.open {
-    top: 0; /* Slide down into view */
-    transform: translateY(0); /* Make it visible */
+    transform: translateY(-100%); /* Desktop başlangıç durumu */
+    transition: transform 0.5s ease;
 }
 
+.fullscreen-menu.open {
+    transform: translateY(0); /* Desktop görünümü */
+}
 .fullscreen-menu .menu-list {
     list-style: none;
     padding: 0;
@@ -128,8 +127,9 @@ font-size: 1.3rem;
     
 }
 .carousel-caption {
-    bottom: 10%; /* Header Position*/
+    bottom: 7%; /* Header Position*/
     background-color: rgba(0, 0, 0, 0.4); /* Overlay black */
+
 }
 
 
@@ -144,12 +144,9 @@ font-size: 1.3rem;
     border-bottom:black solid 2px;
 }
 .event-date-ort{
-    font-size: 1.3rem;
+    font-size: 1.1rem;
 }
-.event-title{
-    font-size: 1.6rem;
-    font-weight: bold;
-}
+
 .btn-program{
     color: white;
     background-color: #7e1208;
@@ -184,6 +181,9 @@ font-size: 1.3rem;
 .overlay h1,
 .overlay p {
     text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.7);
+    overflow: hidden;
+    padding: 15px;
+    margin: auto;
 }
 
 /* Ensure image stays behind overlay */
@@ -207,7 +207,7 @@ font-size: 1.3rem;
     color: white;
     
 }
-.btn-bar-blue{      /* here for "claim" Buttons */
+.btn-bar-blue{      /* here for Blue "claim" Buttons */
     color: white;
     background-color: #2F528F;
     padding: 10px 10px;
@@ -267,7 +267,6 @@ font-size: 1.5rem;
     background-color: white;
     color: #50701D;
     font-weight: bold;
-    font-size: 1.2rem;
     margin: 20px;
 }
 
@@ -350,7 +349,6 @@ footer p, footer a {
     background-color: #7e1208; 
     width: 100%; 
     color: white; 
-    margin-bottom: 10px; 
     padding: 20px;
 }
 .footer-bottom a{
@@ -366,28 +364,108 @@ footer p, footer a {
     .main-header{
         width: 100%;
     }
+
+
+    .fullscreen-menu {
+        top: 0; /* Üstten başlasın */
+        left: auto; /* Sağdan açılmaya başla */
+        right: 0; /* Sağ tarafa hizalan */
+        width: 80%; /* Sağdan gelen menü genişliği */
+        height: 100%; /* Tam yükseklik */
+        transform: translateX(100%); /* Mobil başlangıç pozisyonu: görünmez */
+        transition: transform 0.5s ease; /* Sağdan gelen animasyon */
+        color: aqua;
+    }
+
+    .fullscreen-menu.open {
+        transform: translateX(0); /* Mobil için görünür */
+    }
 }
 
 @media (max-width: 768px) {
-    
+    body {
+    font-size: 1rem;
+    }
     .main-header{
         width: 100%;
     }
+
+    /* Fullscreen menü için sağdan açılacak düzenlemeler */
+    .fullscreen-menu {
+        top: 0; /* Üstten başlasın */
+        left: auto; /* Sağdan açılmaya başla */
+        right: 0; /* Sağ tarafa hizalan */
+        width: 80%; /* Sağdan gelen menü genişliği */
+        height: 100%; /* Tam yükseklik */
+        transform: translateX(100%); /* Mobil başlangıç pozisyonu: görünmez */
+        transition: transform 0.5s ease; /* Sağdan gelen animasyon */
+        color: aqua;
+    }
+
+    .fullscreen-menu.open {
+        transform: translateX(0); /* Mobil için görünür */
+    }
+   
 }
 
 @media (max-width: 480px) {
     body {
         width: 100%;
     }
-    .main-header{
+    .main-header {
         width: 100%;
     }
     .carousel {
-        height: 200px; 
+        height: 600px; /* Yükseklik mobilde 200px */
     }
 
     .carousel-caption {
-        font-size: 12px; 
+        font-size: 1rem; /* Başlık font boyutunu küçük yapar */
+        bottom: 15%; /* Header Position*/
     }
+    .carousel p{
+        font-size: 1rem; /* Metnin font boyutunu küçük yapar */
+    
+    }
+
+    .card {
+        display: flex;
+        flex-direction: row; /* Resmi sola, metni sağa hizalar */
+        align-items: center; /* Dikeyde ortalar */
+        justify-content: space-between; /* Alanı eşit olarak böler */
+    }
+
+    .card-body {
+        display: flex;
+        flex-direction: row; /* Metin ve görseli yan yana getirir */
+        align-items: center; /* Dikeyde ortalar */
+    }
+
+    /* Üstteki kart resmini mobilde gizle */
+    .card img.card-img-top {
+        display: none; /* Desktop görüntüsü için üstteki resmi gizle */
+    }
+
+    /* Resmi mobilde sol tarafa yerleştir */
+    .card img.img-fluid {
+        display: block; /* Mobilde sol tarafa gelen resmi gösterir */
+        width: 60%; /* Resmin genişliğini ayarlayarak sağdaki metnin alanını daraltabilirsiniz */
+    }
+
+    .card-title {
+        margin: 0; /* Başlıkların gereksiz boşluklarını kaldırır */
+        text-align: left; /* Başlığı sola hizalar */
+    }
+
+    .overlay h1,
+    .overlay p {
+    text-align: center;
+    padding: 5px;
+    font-size: 1.1rem;
+    overflow: hidden;
+}
+.event-section{
+    padding: 10px 0px 5px 10px;
+}
 
 }
