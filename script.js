@@ -3,20 +3,51 @@ const menuIcon = document.getElementById('menuIcon');
 const hamburgerIcon = document.querySelector('.hamburger');
 const closeIcon = document.querySelector('.close');
 const fullscreenMenu = document.getElementById('fullscreenMenu');
+const body = document.body;
 
 // Toggle the menu
 menuIcon.addEventListener('click', function () {
     // Menü açık değilse aç
     if (!fullscreenMenu.classList.contains('open')) {
-        fullscreenMenu.classList.add('open'); // CSS animasyon sınıfı eklenir
-        hamburgerIcon.style.display = 'none'; // Hamburger simgesini gizle
-        closeIcon.style.display = 'inline-block'; // Kapat simgesini göster
+        fullscreenMenu.classList.add('open');
+        hamburgerIcon.style.display = 'none';
+        closeIcon.style.display = 'inline-block';
+        body.style.overflow = 'hidden'; 
     } else {
-        fullscreenMenu.classList.remove('open'); // CSS animasyon sınıfı çıkarılır
-        hamburgerIcon.style.display = 'inline-block'; // Hamburger simgesini geri getir
-        closeIcon.style.display = 'none'; // Kapat simgesini gizle
+        fullscreenMenu.classList.remove('open');
+        hamburgerIcon.style.display = 'inline-block';
+        closeIcon.style.display = 'none';
+        body.style.overflow = 'auto'; 
     }
 });
+
+// Search Area
+const searchIcon = document.getElementById('searchIcon');
+const searchInput = document.getElementById('searchInput');
+
+searchIcon.addEventListener('click', function() {
+  searchInput.classList.toggle('open');
+  if (searchInput.classList.contains('open')) {
+    searchInput.focus(); // Arama kutusu açıldığında focus'lanır
+    searchInput.style.width = '200px'; // Arama kutusu açıldığında genişliği ayarla
+    searchInput.style.right = '0';
+  } else {
+    searchInput.style.width = '0'; // Arama kutusu kapandığında genişliği sıfırla
+    searchInput.style.right = '0';
+  }
+});
+
+// Input alanından çıkıldığında (blur eventi) arama kutusunu kapat
+searchInput.addEventListener('blur', function() {
+  searchInput.classList.remove('open');
+  searchInput.style.width = '0'; // Arama kutusu kapandığında genişliği sıfırla
+  searchInput.style.right = '0';
+});
+
+
+
+
+
 
 
 

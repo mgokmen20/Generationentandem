@@ -1,3 +1,14 @@
+/*
+Theme Name: UND Generationentandem Thema
+Theme URI: ###
+Author: Mehmet GÖKMEN
+Author URI: https://gokmennet.blogspot.com
+Description: UND Generationentandem WordPress thema.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
 body {
     margin: 0;
     /* font-family: Arial, sans-serif; */
@@ -27,10 +38,16 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: top 0.3s ease;
     padding: 10px 0;
+    display: flex; /* Header'ı da flex container yapıyoruz */
+    justify-content: space-between; /* Logo ve menü arasında boşluk bırakır */
+    align-items: center; 
 }
 .header-right {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    
 }
 .logo {
     font-size: 1.5rem;
@@ -63,7 +80,46 @@ body {
     display: inline-block;
 }
 
+.search-container {
+    position: relative;
+    display: flex;
+    z-index: 101; 
+    margin-right: 50px;
+}
 
+.search-icon {
+    cursor: pointer;
+    color: white;
+    font-size: 1.5rem;
+    transition: color 0.3s; 
+}
+
+.search-icon:hover {
+    color: #ccc; 
+}
+
+.search-input {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 0;
+    height: 35px;
+    padding: 0;
+    border: none;
+    border-radius: 5px;
+    opacity: 0;
+    transition: width 0.5s ease, opacity 0.5s ease, padding 0.5s ease;
+    background-color: #fff;
+    color: #000;
+    margin: auto 0; /* Dikeyde ortalamak için bunu kullaniyoruz artik ise yariyor. */
+}
+
+.search-input.open {
+    width: 0px; /* Arama ikonuna tiklandiginda genislik degeri JS ile atanacak*/
+    opacity: 1;
+    padding: 0 10px;
+    right: 45px; /* search input arama ikonunun hemen yaninda baslayacak */
+}
 
 /* Fullscreen Menu */
 
@@ -81,12 +137,12 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    transform: translateY(-100%); /* Desktop başlangıç durumu */
+    transform: translateY(-100%); 
     transition: transform 0.5s ease;
 }
 
 .fullscreen-menu.open {
-    transform: translateY(0); /* Desktop görünümü */
+    transform: translateY(0); /* Desktop  */
 }
 .fullscreen-menu .menu-list {
     list-style: none;
@@ -367,18 +423,18 @@ footer p, footer a {
 
 
     .fullscreen-menu {
-        top: 0; /* Üstten başlasın */
-        left: auto; /* Sağdan açılmaya başla */
-        right: 0; /* Sağ tarafa hizalan */
-        width: 80%; /* Sağdan gelen menü genişliği */
-        height: 100%; /* Tam yükseklik */
-        transform: translateX(100%); /* Mobil başlangıç pozisyonu: görünmez */
-        transition: transform 0.5s ease; /* Sağdan gelen animasyon */
+        top: 0; 
+        left: auto; 
+        right: 0; 
+        width: 80%; 
+        height: 100%; 
+        transform: translateX(100%); 
+        transition: transform 0.5s ease; 
         color: aqua;
     }
 
     .fullscreen-menu.open {
-        transform: translateX(0); /* Mobil için görünür */
+        transform: translateX(0); 
     }
 }
 
@@ -390,22 +446,21 @@ footer p, footer a {
         width: 100%;
     }
 
-    /* Fullscreen menü için sağdan açılacak düzenlemeler */
+    /* Edits to open from the right for the fullscreen menu */
     .fullscreen-menu {
-        top: 0; /* Üstten başlasın */
-        left: auto; /* Sağdan açılmaya başla */
-        right: 0; /* Sağ tarafa hizalan */
-        width: 80%; /* Sağdan gelen menü genişliği */
-        height: 100%; /* Tam yükseklik */
-        transform: translateX(100%); /* Mobil başlangıç pozisyonu: görünmez */
-        transition: transform 0.5s ease; /* Sağdan gelen animasyon */
+        top: 0; 
+        left: auto; 
+        right: 0; 
+        width: 80%; 
+        height: 100%; 
+        transform: translateX(100%); 
+        transition: transform 0.5s ease; 
         color: aqua;
     }
 
     .fullscreen-menu.open {
-        transform: translateX(0); /* Mobil için görünür */
+        transform: translateX(0); 
     }
-   
 }
 
 @media (max-width: 480px) {
@@ -416,45 +471,45 @@ footer p, footer a {
         width: 100%;
     }
     .carousel {
-        height: 600px; /* Yükseklik mobilde 200px */
+        height: 600px; 
     }
 
     .carousel-caption {
-        font-size: 1rem; /* Başlık font boyutunu küçük yapar */
-        bottom: 15%; /* Header Position*/
+        font-size: 1rem; 
+        bottom: 15%; 
     }
     .carousel p{
-        font-size: 1rem; /* Metnin font boyutunu küçük yapar */
+        font-size: 1rem; 
     
     }
 
     .card {
         display: flex;
-        flex-direction: row; /* Resmi sola, metni sağa hizalar */
-        align-items: center; /* Dikeyde ortalar */
-        justify-content: space-between; /* Alanı eşit olarak böler */
+        flex-direction: column; 
+        align-items: center; 
+        justify-content: space-between; 
     }
 
     .card-body {
         display: flex;
-        flex-direction: row; /* Metin ve görseli yan yana getirir */
-        align-items: center; /* Dikeyde ortalar */
+        flex-direction: row; /* Brings text and image together */
+        align-items: center; 
     }
 
-    /* Üstteki kart resmini mobilde gizle */
+    /* Hide top card image on mobile */
     .card img.card-img-top {
-        display: none; /* Desktop görüntüsü için üstteki resmi gizle */
+        display: none; /* Hide top image for desktop view */
     }
 
-    /* Resmi mobilde sol tarafa yerleştir */
+    /* Place image on left side on mobile */
     .card img.img-fluid {
-        display: block; /* Mobilde sol tarafa gelen resmi gösterir */
-        width: 60%; /* Resmin genişliğini ayarlayarak sağdaki metnin alanını daraltabilirsiniz */
+        display: block; /* Shows the image on the left side on mobile */
+        width: 100%; 
     }
 
     .card-title {
-        margin: 0; /* Başlıkların gereksiz boşluklarını kaldırır */
-        text-align: left; /* Başlığı sola hizalar */
+        margin: 0; 
+        text-align: left; 
     }
 
     .overlay h1,
