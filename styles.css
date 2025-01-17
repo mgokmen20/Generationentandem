@@ -68,10 +68,11 @@ body {
 }
 
 .menu-icon .hamburger,
-.menu-icon .close {
+.menu-icon .close, .search-icon {
     font-size: 2rem;
     color: #ffff;
     display: inline-block;
+    line-height: 1;
 }
 .menu-icon .close {
     display: none; /* Initially, hide close icon */
@@ -111,14 +112,14 @@ body {
     transition: width 0.5s ease, opacity 0.5s ease, padding 0.5s ease;
     background-color: #fff;
     color: #000;
-    margin: auto 0; /* Dikeyde ortalamak için bunu kullaniyoruz artik ise yariyor. */
+    margin: auto 0; 
 }
 
 .search-input.open {
-    width: 0px; /* Arama ikonuna tiklandiginda genislik degeri JS ile atanacak*/
+    width: 0px;
     opacity: 1;
     padding: 0 10px;
-    right: 45px; /* search input arama ikonunun hemen yaninda baslayacak */
+    right: 45px; 
 }
 
 /* Fullscreen Menu */
