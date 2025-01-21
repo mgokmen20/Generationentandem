@@ -13,6 +13,7 @@ menuIcon.addEventListener('click', function () {
         hamburgerIcon.style.display = 'none';
         closeIcon.style.display = 'inline-block';
         body.style.overflow = 'hidden'; 
+
     } else {
         fullscreenMenu.classList.remove('open');
         hamburgerIcon.style.display = 'inline-block';

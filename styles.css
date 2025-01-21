@@ -11,8 +11,6 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 body {
     margin: 0;
-    /* font-family: Arial, sans-serif; */
-    
     background-color: #f8f9fa; 
     width: calc(100% - 300px); 
     margin: 0 auto; /* For middle */
@@ -34,12 +32,12 @@ body {
     width: calc(100% - 300px); /* Same as body width */
     max-width: 1200px;
     z-index: 1000; 
-    background-color: rgba(126, 18, 8, 1);
+    background-color: rgba(127, 17, 9, 1);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: top 0.3s ease;
     padding: 10px 0;
-    display: flex; /* Header'ı da flex container yapıyoruz */
-    justify-content: space-between; /* Logo ve menü arasında boşluk bırakır */
+    display: flex; 
+    justify-content: space-between; 
     align-items: center; 
 }
 .header-right {
@@ -110,7 +108,7 @@ body {
     border-radius: 5px;
     opacity: 0;
     transition: width 0.5s ease, opacity 0.5s ease, padding 0.5s ease;
-    background-color: #fff;
+    background-color: #ffff;
     color: #000;
     margin: auto 0; 
 }
@@ -130,7 +128,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(127, 17, 9, 0.9);
     color: white;
     z-index: 999;
     display: flex;
@@ -140,32 +138,32 @@ body {
     text-align: center;
     transform: translateY(-100%); 
     transition: transform 0.5s ease;
+    font-size: 1.3rem;
 }
 
 .fullscreen-menu.open {
     transform: translateY(0); /* Desktop  */
 }
-.fullscreen-menu .menu-list {
+.fullscreen-menu .nav-link {
     list-style: none;
-    padding: 0;
+    padding: 5px;
     margin: 0;
+    color: #ffff;
+    align-items: start;
+    display: flex;
+}
+.fullscreen-menu .nav-item{
+    display: block;
+    align-items: start;
 }
 
-.fullscreen-menu .menu-list li {
-    margin: 20px 0;
+.collapse ul {
+    padding-left: 20px; 
+    
 }
 
-.fullscreen-menu .menu-list li a {
-    color: white;
-    text-decoration: none;
-    font-size: 2rem;
-    font-weight: bold;
-    transition: color 0.3s;
-}
 
-.fullscreen-menu .menu-list li a:hover {
-    color: #7e1208;
-}
+
 
 /* Slider */
 
@@ -206,7 +204,7 @@ font-size: 1.3rem;
 
 .btn-program{
     color: white;
-    background-color: #7e1208;
+    background-color: #7f1109;
     border-radius: 5px;
     padding: 10px 10px;
     cursor: pointer;
@@ -250,7 +248,7 @@ font-size: 1.3rem;
 
 .btn-bar{           /* here for "Red claim" Buttons */
     color: white;
-    background-color: #7e1208;
+    background-color: #7f1109;
     padding: 10px 10px;
     cursor: pointer;
     transition: background-color 0.3s;
@@ -295,7 +293,7 @@ font-size: 1.3rem;
 }
 .btn-program-blue:hover{
     background-color: #708CBC;
-    color: white;
+    color: #ffff;
 }
 .img-header{
     object-fit: cover;
@@ -363,7 +361,7 @@ font-size: 1.5rem;
 }
 
 .btn-red{
-    background-color: #7e1208;
+    background-color: #7f1109;
     color: white;
     font-weight: bold;
     font-weight: bold;
@@ -371,12 +369,12 @@ font-size: 1.5rem;
 }
 .btn-red:hover{
     background-color: white;
-    color: #7e1208;
+    color: #7f1109;
     font-weight: bold;
 }
 
 .footer {
-    background-color: #7e1208;
+    background-color: #7f1109;
     color: white;
     width: 100%;
 }
@@ -403,7 +401,7 @@ footer p, footer a {
     color: white;
 }
 .footer-bottom{
-    background-color: #7e1208; 
+    background-color: #7f1109; 
     width: 100%; 
     color: white; 
     padding: 20px;
@@ -412,6 +410,7 @@ footer p, footer a {
     text-decoration: none;
     color: white;
 }
+
 
 /* Relative design Media Query */
 @media (max-width: 1024px) {
@@ -431,7 +430,6 @@ footer p, footer a {
         height: 100%; 
         transform: translateX(100%); 
         transition: transform 0.5s ease; 
-        color: aqua;
     }
 
     .fullscreen-menu.open {
@@ -456,7 +454,6 @@ footer p, footer a {
         height: 100%; 
         transform: translateX(100%); 
         transition: transform 0.5s ease; 
-        color: aqua;
     }
 
     .fullscreen-menu.open {
@@ -464,6 +461,94 @@ footer p, footer a {
     }
 }
 
+.card {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: space-between; 
+}
+
+.card-body {
+    display: flex;
+    flex-direction: row; /* Brings text and image together */
+    align-items: center; 
+}
+
+/* Hide top card image on mobile */
+.card img.card-img-top {
+    display: none; /* Hide top image for desktop view */
+}
+
+/* Place image on left side on mobile */
+.card img.img-fluid {
+    display: block; /* Shows the image on the left side on mobile */
+    width: 100%; 
+}
+
+.card-title {
+    margin: 0; 
+    text-align: left; 
+}
+
+.overlay h1,
+.overlay p {
+text-align: center;
+padding: 5px;
+font-size: 1.1rem;
+overflow: hidden;
+}
+
+
+
+/* Adjust card design for 580px to 768px width */
+@media (min-width: 576px) and (max-width: 768px) {
+    .card {
+        display: flex;
+        flex-direction: column; /* Ensure vertical stacking */
+        align-items: center;
+        justify-content: center;
+        margin: 10px auto; /* Add spacing between cards */
+        max-width: 480px; /* Restrict card width to 480px */
+    }
+
+    .card-body {
+        display: flex;
+        flex-direction: column; /* Stack title and image */
+        text-align: center;
+        padding: 10px;
+    }
+
+    .card img.img-fluid {
+        display: block; /* Ensure image is visible */
+        width: 100%;
+        height: auto; /* Maintain aspect ratio */
+    }
+    .card-title {
+        margin: 0; 
+        font-size: 1rem;
+    }
+}
+
+/* Fix fullscreen menu behavior */
+@media (max-width: 1024px) {
+    .fullscreen-menu {
+        position: fixed;
+        top: 0;
+        left: auto;
+        right: 0;
+        width: 80%; /* Adjust menu width */
+        height: 100%;
+        transform: translateX(100%); /* Hide menu off-screen */
+        transition: transform 0.3s ease; /* Smooth animation */
+    }
+
+    .fullscreen-menu.open {
+        transform: translateX(0); /* Bring menu into view */
+    }
+    
+}
+
+/* General improvements for cards on smaller screens */
 @media (max-width: 480px) {
     body {
         width: 100%;
@@ -486,7 +571,7 @@ footer p, footer a {
 
     .card {
         display: flex;
-        flex-direction: column; 
+        flex-direction: row; 
         align-items: center; 
         justify-content: space-between; 
     }
@@ -525,3 +610,5 @@ footer p, footer a {
 }
 
 }
+
+
