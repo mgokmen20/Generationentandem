@@ -1,11 +1,3 @@
-//* Header Area...
-
-
-
-
-
-
-
 
 // Search Area
 const searchIcon = document.getElementById('searchIcon');
