@@ -1,26 +1,9 @@
 //* Header Area...
-const menuIcon = document.getElementById('menuIcon');
-const hamburgerIcon = document.querySelector('.hamburger');
-const closeIcon = document.querySelector('.close');
-const fullscreenMenu = document.getElementById('fullscreenMenu');
-const body = document.body;
 
-// Toggle the menu
-menuIcon.addEventListener('click', function () {
-    // Menü açık değilse aç
-    if (!fullscreenMenu.classList.contains('open')) {
-        fullscreenMenu.classList.add('open');
-        hamburgerIcon.style.display = 'none';
-        closeIcon.style.display = 'inline-block';
-        body.style.overflow = 'hidden'; 
 
-    } else {
-        fullscreenMenu.classList.remove('open');
-        hamburgerIcon.style.display = 'inline-block';
-        closeIcon.style.display = 'none';
-        body.style.overflow = 'auto'; 
-    }
-});
+
+
+
 
 
 
@@ -74,6 +57,7 @@ searchInput.addEventListener('blur', function () {
   myCarousel.addEventListener('mouseleave', function () {
     carousel.cycle(); // Start automatic migration
   });
+
 
 
 

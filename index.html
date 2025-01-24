@@ -15,131 +15,93 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
 <div>
-    
+  <div class="container my-0 custom-container">
 <!-- Header -->
-<header class="main-header">
-  <div class="container-fluid d-flex justify-content-between align-items-center">
+<header class="main-header w-100 flex-grow-1">
+  <div class="container-fluid d-flex justify-content-between align-items-center ">
       <div class="logo">
-          <img class="logo-image" src="./img/Logo-weiss-UND-Generationentandem.png" alt="Logo">
-      </div>
+         <a href="#"> <img class="logo-image" src="./img/Logo-weiss-UND-Generationentandem.png" alt="Logo">
+      </div></a>
       <div class="header-right d-flex align-items-center">
           <div class="search-container" id="searchContainer">
               <i class="bi bi-search search-icon" id="searchIcon"></i>
               <input type="text" class="search-input" id="searchInput" placeholder="Search...">
           </div>
-          <div class="menu-icon" id="menuIcon">
-              <span class="hamburger">☰</span>
-              <span class="close">×</span>
+          <div class="menu-icon">
+            <button class="btn menu-hamburger" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu">
+              ☰
+            </button>
           </div>
       </div>
   </div>
 </header>
 <!-- Header Finished -->
-<!-- Full screen menu-->
-<div class="fullscreen-menu" id="fullscreenMenu">
-  <div class="mx-auto p-2 nav-container">
-  <nav>
-    <hr style="border-style: solid; border-width: 2px; border-color: white;">
-    <h5 style="margin: 20px;">Über uns</h5>
-      <ul class="nav flex-column">
-          
-          
-          <li class="nav-item">
-            <a class="nav-link active" href="#">Team</a>
-        </li>
-          <!-- Organisation -->
-          <li class="nav-item">
-              <a class="nav-link" href="#" data-bs-toggle="collapse" data-bs-target="#OrganisationMenu" aria-expanded="false" aria-controls="OrganisationMenu">
-                  Organisation
-                  <i class="bi bi-caret-down-fill"></i>
-              </a>
-              <div class="collapse" id="OrganisationMenu">
-                  <ul class="nav flex-column">
-                      <li class="nav-item">
-                          <a class="nav-link" href="#">Mitmachen</a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link" href="#">Mitgliedschaft</a>
-                      </li>
-                  </ul>
-              </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" href="#">Kontakt</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" href="#">Medienmitteilungen</a>
+
+<!-- Full screen Off-Canvas menu-->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasMenuLabel">Menü</h5>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body ">
+    <!-- Menü Elemanları -->
+    <ul class="nav-item">
+      <h5>Über UND</h5>
+      <li class="nav-link">
+          <a href="#">Vision</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link active" href="#">Medienspiegel</a>
-    </li>
-          <!-- Bereiche -->
-          <hr style="border-style: solid; border-width: 2px; border-color: white;">
-          <h5>Bereiche</h5>
-          <li class="nav-item">
-            <a class="nav-link active" href="./programm.html">Programm</a>
-        </li>
-          <li class="nav-item">
-              <a class="nav-link" href="#" data-bs-toggle="collapse" data-bs-target="#magazinMenu" aria-expanded="false" aria-controls="magazinMenu">
-                  Magazin
-                  <i class="bi bi-caret-down-fill"></i>
-              </a>
-              <div class="collapse" id="magazinMenu">
-                  <ul class="nav flex-column">
-                      <li class="nav-item">
-                          <a class="nav-link" href="#">Schwerpunkt</a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link" href="#">Magazin abonnieren</a>
-                      </li>
-                      
-                  </ul>
-              </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#" data-bs-toggle="collapse" data-bs-target="#höchhusMenu" aria-expanded="false" aria-controls="höchhusMenu">
-                Offenes Höchhus
-                <i class="bi bi-caret-down-fill"></i>
-            </a>
-            <div class="collapse" id="höchhusMenu">
-                <ul class="nav flex-column">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Angebot</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Gastronomie</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Geschichte</a>
-                  </li>
-                </ul>
-            </div>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" href="#">Freiwilligenarbeit</a>
+      <li class="nav-link">
+          <a href="#">Team</a>
+          <ul>
+              <li class="nav-link"><a href="#">Vorstand</a></li>
+              <li class="nav-link"><a href="#">Geschäftsstelle</a></li>
+              <li class="nav-link"><a href="#">Team</a></li>
+              </ul>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#" data-bs-toggle="collapse" data-bs-target="#digitalenWissenMenu" aria-expanded="false" aria-controls="digitalenWissenMenu">
-          Digitalen Wissen
-            <i class="bi bi-caret-down-fill"></i>
-        </a>
-        <div class="collapse" id="digitalenWissenMenu">
-            <ul class="nav flex-column">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Individuelle Technikhilfe</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Kursreihe Digitales Wissen</a>
-                </li>
-                
-            </ul>
-        </div>
-    </li>
+      <li class="nav-link"><a href="#">Organigramm</a></li>
+      <li class="nav-link"><a href="#">Kontakt</a></li>
+      <li class="nav-link"><a href="#">Medienmitteilungen</a></li>
+      <li class="nav-link"><a href="#">Medienspiegel</a></li>
+      <h5>Bereiche</h5>
+  <li class="nav-link"><a href="#">Programm</a></li>
+  <li class="nav-link"><a href="#">Magazin</a>
+    
+      <ul>
+      <li class="nav-link"><a href="#">Schwerpunkt</a></li>
+      <li class="nav-link"><a href="#">Abonnieren</a></li>
+      <li class="nav-link"><a href="#">Geschenkabo</a></li>
       </ul>
-  </nav>
+  </li>
+  <li class="nav-link"><a href="#">Offenes Höchhus</a>
+      <ul>
+      <li class="nav-link"><a href="#">Begegnungscafé</a></li>
+      <li class="nav-link"><a href="#">Räume reservieren</a></li>
+      <li class="nav-link"><a href="#">Programm</a></li>
+      <li class="nav-link"><a href="#">Begegnung</a></li>
+      <li class="nav-link"><a href="#">Geschichte</a></li>
+  </ul>
+  </li>
+  <li class="nav-link"><a href="#">Freiwilligenarbeit</a></li>
+  <li class="nav-link"><a href="#">Digitale Teilhabe</a>
+  <ul>
+      <li class="nav-link"><a href="#">Individuelle Technikhilfe</a></li>
+      <li class="nav-link"><a href="#">Kursreihe Digitales Wissen</a></li>
+  </ul>
+  </li>
+  
+  <li class="nav-link"><a href="#">Generationenfestival</a></li>
+  
+  <li class="nav-link"><a href="#">Kerzenziehen</a></li>
+  
+  <li class="nav-link"><a href="#">wohnenUNDleben</a></li>
+  <h5>Call to Action</h5>
+  <li class="nav-link"><a href="#">Mitglied werden</a></li>
+  <li class="nav-link"><a href="#">Mitmachen</a></li>
+  <li class="nav-link"><a href="#">Spenden</a></li>
+  </ul>
+  </div>
 </div>
-</div>
-</div>
+
 <!-- Full Screen Menu Finished -->
 
 
@@ -235,7 +197,7 @@
         <button class="btn btn-program" type="button">Programm</button> 
     </div>
 
-</div>
+
 
 
 <!-- Artikels cards -->
@@ -268,21 +230,26 @@
   </div>
 </div>
 
+
+
+
+
+
+
+
 <!-- Section 2-->
 
     <!-- Image Area -->
-    <div class="position-relative text-center">
-        <!-- Image -->
-        <img src="./img/Politpodium-BVG-Reform-800x533.jpg" class="img-fluid w-100" alt="...">
-        
-        <!-- Overlay -->
-        <div class="overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center align-items-center" >
-            <h1 class="text-white fw-bold">Steuern runter -tut das Thun gut</h1>
-            <p class="text-white mt-2 paragraph-img">Die Stadt Thun will die Steuern senken. Über den breiten politischen Kompromiss einer Senkung von 1,72 auf 1,66 Einheiten entscheiden die Thuner Stimmbürger:innen. Das lokale Politpodium fragt: Taugt der Kompromiss? Und wie geht es weiter mit der Thuner Steuerpolitik?</p>
-        </div>
 
-        
+
+    <div class="card text-center position-relative">
+      <img src="./img/Politpodium-BVG-Reform-800x533.jpg" class="card-img" alt="...">
+      <div class="card-img-overlay d-flex flex-column justify-content-center align-items-center bg-dark bg-opacity-50">
+        <h2 class="card-title text-white fw-bold">Lorem ipsum dolor sit amet.</h2>
+        <p class="card-text text-white fs-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic neque dolores deleniti ducimus et adipisci unde culpa quaerat non? Provident!</p>
+      </div>
     </div>
+    
     <!-- Text Below Button -->
     <button class="btn w-100 btn-bar">Claim</button>
     
@@ -326,18 +293,14 @@
 <!-- Section 3 Blau-->
 
     <!-- Image Area -->
-    <div class="position-relative text-center">
-        <!-- Image -->
-        <img src="./img/steffisburger sagt ja.jpg" class="img-fluid w-100" alt="...">
-        
-        <!-- Overlay -->
-        <div class="overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center align-items-center">
-            <h1 class="text-white fw-bold">Lorem ipsum dolor sit amet.</h1>
-            <p class="text-white mt-2 paragraph-img">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam minus assumenda rem, iste commodi, consectetur corporis quibusdam repellendus qui sapiente magnam alias nobis, ex enim.</p>
-        </div>
-
-        
+    <div class="card text-center position-relative">
+      <img src="./img/steffisburger sagt ja.jpg" class="card-img" alt="...">
+      <div class="card-img-overlay d-flex flex-column justify-content-center align-items-center bg-dark bg-opacity-50">
+        <h2 class="card-title text-white fw-bold">Lorem ipsum dolor sit amet.</h2>
+        <p class="card-text text-white fs-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic neque dolores deleniti ducimus et adipisci unde culpa quaerat non? Provident!</p>
+      </div>
     </div>
+
     <!-- Text Below Button -->
     <button class="btn w-100 btn-bar-blue">Claim</button>
     
@@ -378,21 +341,33 @@
 <!-- Section 4-->
 
     <!-- Image Area -->
-    <div class="position-relative text-center">
-        <!-- Image -->
-        <img src="./img/Offenes Höchhus.jpg" class="img-fluid w-100 img-header" alt="...">
-        
-        <!-- Overlay -->
-        <div class="overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center align-items-center">
-            <h1 class="text-white fw-bold">Begegnungszentrum Offenes Höchhus - von und für alle!</h1>
-            <p class="text-white mt-2 paragraph-img">Öffnungzeiten <br> Mo, Mi, Do : 9-17 Uhr <br> Di und Fr :9 - 22 Uhr <br> Sa : 10 - 16 Uhr</p>
-        </div>
-
-        
+    <div class="card text-center position-relative">
+      <img src="./img/Offenes Höchhus.jpg" class="card-img img-fluid" alt="..." >
+      <div class="card-img-overlay d-flex flex-column justify-content-center align-items-center bg-dark bg-opacity-50">
+        <h2 class="card-title text-white fw-bold">Begegnungszentrum Offenes Höchhus - von und für alle!</h2>
+        <p class="card-text text-white fs-5">Öffnungzeiten <br> Mo, Mi, Do : 9-17 Uhr <br> Di und Fr :9 - 22 Uhr <br> Sa : 10 - 16 Uhr</p>
+      </div>
     </div>
+    
     <div class="position-relative text-center" style="background-color: #6c1611; height: 100px; margin-bottom: 30px;">
-        <img src="./img/LogoHöchhusWeiss.png" alt="" style="height: 100px;">
+      <img src="./img/LogoHöchhusWeiss.png" alt="" style="height: 100px;" class="img-fluid">
     </div>
+    
+    
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
     <div class="card-group">
       <!-- First Card -->
       <div class="card mb-3">
@@ -431,18 +406,16 @@
 <!-- Section 5-->
 
     <!-- Image Area -->
-    <div class="position-relative text-center">
-      <!-- Image -->
-      <img src="./img/Politpodium-BVG-Reform-800x533.jpg" class="img-fluid w-100" alt="...">
-      
-      <!-- Overlay -->
-      <div class="overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center align-items-center">
-          <h1 class="text-white fw-bold">Lorem ipsum dolor sit amet.</h1>
-          <p class="text-white mt-2 paragraph-img">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias assumenda distinctio vel libero voluptatibus adipisci nam iste culpa, minus dolorem quam eligendi quis explicabo molestias.</p>
+    <div class="card text-center position-relative">
+      <img src="./img/Politpodium-BVG-Reform-800x533.jpg" class="card-img" alt="...">
+      <div class="card-img-overlay d-flex flex-column justify-content-center align-items-center bg-dark bg-opacity-50">
+        <h2 class="card-title text-white fw-bold">Lorem ipsum dolor sit amet.</h2>
+        <p class="card-text text-white fs-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic neque dolores deleniti ducimus et adipisci unde culpa quaerat non? Provident!</p>
       </div>
+    </div>
 
       
-  </div>
+  
   <!-- Text Below Button -->
   <button class="btn w-100 btn-bar">Claim</button>
   
@@ -543,31 +516,31 @@
         <div class="row">
           <!-- First three icons (Top row) -->
           <div class="col-4 mb-3">
-            <a href="https://www.instagram.com/generationentandem/" target="_blank"><img class="img-footer-logo" src="./img/logo/instagram (1).png" alt="Instagram Logo">
+            <a class="social-icon" href="https://www.instagram.com/generationentandem/" target="_blank"><img class="img-footer-logo" src="./img/logo/instagram (1).png" alt="Instagram Logo">
               <p>Instagram</p></a>
           </div>
           <div class="col-4 mb-3">
-            <a href="https://www.facebook.com/generationentandem" target="_blank"><img class="img-footer-logo" src="./img/logo/facebook (1).png" alt="Facebook Logo">
+            <a class="social-icon" href="https://www.facebook.com/generationentandem" target="_blank"><img class="img-footer-logo" src="./img/logo/facebook (1).png" alt="Facebook Logo">
               <p>Facebook</p></a>
           </div>
           <div class="col-4 mb-3">
-            <a href="https://www.linkedin.com/company/generationentandem" target="_blank"><img class="img-footer-logo" src="./img/logo/linkedin.png" alt="LinkedIn Logo">
+            <a class="social-icon" href="https://www.linkedin.com/company/generationentandem" target="_blank"><img class="img-footer-logo" src="./img/logo/linkedin.png" alt="LinkedIn Logo">
               <p>LinkedIn</p></a>
             
           </div>
           <!-- Next three icons (Bottom row) -->
           <div class="col-4">
-            <a href="https://www.youtube.com/user/generationentandem" target="_blank"><img class="img-footer-logo" src="./img/logo/youtube.png" alt="YouTube Logo">
+            <a class="social-icon" href="https://www.youtube.com/user/generationentandem" target="_blank"><img class="img-footer-logo" src="./img/logo/youtube.png" alt="YouTube Logo">
               <p>YouTube</p></a>
             
           </div>
           <div class="col-4">
-            <a href="https://soundcloud.com/generationentandem" target="_blank"><img class="img-footer-logo" src="./img/logo/podcast.png" alt="Podcast Logo">
+            <a class="social-icon" href="https://soundcloud.com/generationentandem" target="_blank"><img class="img-footer-logo" src="./img/logo/podcast.png" alt="Podcast Logo">
               <p>Podcast</p></a>
             
           </div>
           <div class="col-4">
-            <a href="#" target="_blank"><img class="img-footer-logo" src="./img/logo/send.png" alt="Newsletter Logo">
+            <a class="social-icon" href="#" target="_blank"><img class="img-footer-logo" src="./img/logo/send.png" alt="Newsletter Logo">
               <p>Newsletter</p></a>
             
           </div>
@@ -635,7 +608,7 @@
   </div>
 </div>
 
-
+</div>
 <!-- container Finished here -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="script.js"></script>

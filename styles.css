@@ -9,28 +9,23 @@ License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 
-body {
-    margin: 0;
-    background-color: #f8f9fa; 
-    width: calc(100% - 300px); 
-    margin: 0 auto; /* For middle */
-    max-width: 1200px; 
-    font-family: 'Roboto', sans-serif;
-}
+
 
 /* Custom Container */
 .custom-container {
-    position: relative;
+    padding: 0;
+    
+}
+.custom-container img{
+    max-height: 700px;
+    object-fit: cover;
 }
 
 /* Header */
 .main-header {
-    position: fixed; /* always stay on Top */
+    position: sticky; /* always stay on Top */
     top: 0; 
-    left: 50%; /* to center horizontally */
-    transform: translateX(-50%); /* to center horizontally */
-    width: calc(100% - 300px); /* Same as body width */
-    max-width: 1200px;
+    width: 100%;
     z-index: 1000; 
     background-color: rgba(127, 17, 9, 1);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -44,8 +39,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 15px;
-    
 }
 .logo {
     font-size: 1.5rem;
@@ -53,48 +46,41 @@ body {
 }
 
 .logo-image {
-    width: 100px;
+    max-width: 100px;
     height: auto;
 }
 
-.menu-icon {
-    cursor: pointer;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    z-index: 100;
-}
-
-.menu-icon .hamburger,
-.menu-icon .close, .search-icon {
-    font-size: 2rem;
+.menu-hamburger, .search-icon {
+    font-size: 1.8rem;
     color: #ffff;
     display: inline-block;
     line-height: 1;
+    cursor: pointer;
+    margin: 5px;
 }
-.menu-icon .close {
-    display: none; /* Initially, hide close icon */
-}
-.menu-icon .hamburger {
-    display: inline-block;
+.menu-hamburger:hover {
+    color: #7f1109;
+    background-color: #ffff;
+    transform: background-color;
+    transform: scale(1.1);
 }
 
 .search-container {
     position: relative;
     display: flex;
     z-index: 101; 
-    margin-right: 50px;
 }
 
 .search-icon {
-    cursor: pointer;
-    color: white;
-    font-size: 1.5rem;
     transition: color 0.3s; 
 }
 
 .search-icon:hover {
-    color: #ccc; 
+    color: #7f1109;
+    background-color: #ffff;
+    transform: background-color;
+    transform: scale(1.2);
+    border-radius: 5px;
 }
 
 .search-input {
@@ -121,77 +107,40 @@ body {
 }
 
 /* Fullscreen Menu */
-.fullscreen-menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+.offcanvas-body {
+    overflow-y: auto; /* If the menu content overflows, a vertical scrollbar will appear */
     background-color: rgba(127, 17, 9, 0.9);
-    color: white;
-    z-index: 999;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    transform: translateY(-100%); 
-    transition: transform 0.5s ease;
-    font-size: 1.3rem;
-    overflow-y: auto;
-    padding: auto;
-}
-
-.fullscreen-menu.open {
-    transform: translateY(0); /* Desktop  */
-}
-.fullscreen-menu .nav-link {
-    list-style: none;
-    padding: 5px;
-    margin: 0;
     color: #ffff;
-    align-items: start;
-    display: flex;
-    justify-content: space-between;
 }
-.fullscreen-menu .nav-link:hover{
-    background-color: #fff;
+.offcanvas-body h5{
+    background-color: #ffff;
     color: #7f1109;
+    padding: 5px;
+    margin: 15px;
+    border: #000 solid 1px;
+    border-radius: 5px;
+}
+  /* Body overflow to prevent page scrolling */
+body.offcanvas-open {
+    overflow: hidden; /* No page scrolling when Offcanvas is open */
+}
+.nav-item li{
+    list-style: none;
+    text-decoration: none;
+    padding: auto;
+    font-size: 1.3rem;
+}
+.nav-link a{
+    color: #ffff;
+    text-decoration: none;
+}
+.nav-link a:hover{
+    background-color: #ffff; 
+    color: #7f1109;
+    border-radius: 5px;
+    padding: 5px;
     transition: background-color 0.8s;
-    border-radius: 10px;
-    cursor: pointer;
 }
-.fullscreen-menu .nav-item{
-    display: block;
-    align-items: start;
-}
-.nav-container{
-    margin-top: 200px;
-    margin-bottom: 30px;
-    padding: 50px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.collapse ul {
-    height: auto;
-    overflow: hidden;
-    font-size: 1rem;
-    transition: padding-left 0.1s ease;
-    padding-left: 50px;
-}
-.collapse {
-    transition: none !important; /* Bootstrap'ın varsayılan animasyonunu geçersiz kıl */
-}
-  /* Kapanırken de 20px girintili kalmasını sağlayan kural */
-.collapse:not(.show) {
-    padding-left: 50px;
-}
-
-
-
 
 /* Slider */
 
@@ -217,6 +166,7 @@ font-size: 1.3rem;
 
 
 
+  
 
 /* Events Area */
 .event-section{
@@ -225,6 +175,7 @@ font-size: 1.3rem;
     text-align: left;
     padding: 10px 0px 5px 50px;
     border-bottom:black solid 2px;
+    margin: 0 15px 0 15px;
 }
 .event-date-ort{
     font-size: 1.1rem;
@@ -246,7 +197,6 @@ font-size: 1.3rem;
     background-color: #BD4E4E;
     color: white;
 }
-
 .card-thumbnails{           /*Here for card images */
     width: 100%;
     height: 250px;
@@ -438,60 +388,92 @@ footer p, footer a {
     text-decoration: none;
     color: white;
 }
-
-
-/* Relative design Media Query */
-@media (max-width: 1024px) {
-    body {
-        width: 100%;
-    }
-    .main-header{
-        width: 100%;
-    }
-
-
-    .fullscreen-menu {
-        top: 0; 
-        left: auto; 
-        right: 0; 
-        width: 80%; 
-        height: 100%; 
-        transform: translateX(100%); 
-        transition: transform 0.5s ease; 
-    }
-
-    .fullscreen-menu.open {
-        transform: translateX(0); 
-    }
+.social-icon img:hover{
+    transform: scale(1.1);
+    transition: transform 0.3s;
 }
+
+
+
 
 @media (max-width: 768px) {
-    body {
-    font-size: 1rem;
+    .card {
+        display: flex;
+        flex-direction: column; 
+        align-items: center; 
+        justify-content: space-between; 
     }
-    .main-header{
-        width: 100%;
+    
+    .card-body {
+        display: flex;
+        flex-direction: row; /* Brings text and image together */
+        align-items: center; 
+    }
+    
+    /* Hide top card image on mobile */
+    .card img.card-img-top {
+        display: none; /* Hide top image for desktop view */
+    }
+    
+    /* Place image on left side on mobile */
+    .card img.img-fluid {
+        display: block; /* Shows the image on the left side on mobile */
+        width: 100%; 
+    }
+    
+    .card-title {
+        margin: 0; 
+        text-align: left; 
     }
 
-    /* Edits to open from the right for the fullscreen menu */
-    .fullscreen-menu {
-        top: 0; 
-        left: auto; 
-        right: 0; 
-        width: 50%; 
-        height: 100%; 
-        transform: translateX(100%); 
-        transition: transform 0.5s ease; 
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+    .card {
+        display: flex;
+        flex-direction: column; /* Ensure vertical stacking */
+        align-items: center;
+        justify-content: center;
+        margin: 10px auto; /* Add spacing between cards */
+        
     }
 
-    .fullscreen-menu.open {
-        transform: translateX(0); 
+    .card-body {
+        display: flex;
+        flex-direction: column; /* Stack title and image */
+        text-align: center;
+        padding: 10px;
+    }
+
+
+    .card-title {
+        margin: 0; 
+        font-size: 1rem;
     }
 }
 
+@media (max-width: 480px) {
+    
+    .carousel {
+        height: 600px; 
+    }
+
+    .carousel-caption {
+        font-size: 1rem; 
+        bottom: 15%; 
+    }
+    .carousel p{
+        font-size: 1rem; 
+    
+    }
+
+
+.event-section{
+    padding: 10px 0px 5px 10px;
+}
 .card {
     display: flex;
-    flex-direction: column; 
+    flex-direction: row; 
     align-items: center; 
     justify-content: space-between; 
 }
@@ -515,126 +497,8 @@ footer p, footer a {
 
 .card-title {
     margin: 0; 
-    text-align: left; 
-}
-
-.overlay h1,
-.overlay p {
-text-align: center;
-padding: 5px;
-font-size: 1.1rem;
-overflow: hidden;
-}
-
-
-
-/* Adjust card design for 580px to 768px width */
-@media (min-width: 576px) and (max-width: 768px) {
-    .card {
-        display: flex;
-        flex-direction: column; /* Ensure vertical stacking */
-        align-items: center;
-        justify-content: center;
-        margin: 10px auto; /* Add spacing between cards */
-        max-width: 480px; /* Restrict card width to 480px */
-    }
-
-    .card-body {
-        display: flex;
-        flex-direction: column; /* Stack title and image */
-        text-align: center;
-        padding: 10px;
-    }
-
-    .card img.img-fluid {
-        display: block; /* Ensure image is visible */
-        width: 100%;
-        height: auto; /* Maintain aspect ratio */
-    }
-    .card-title {
-        margin: 0; 
-        font-size: 1rem;
-    }
-}
-
-/* Fix fullscreen menu behavior */
-@media (max-width: 1024px) {
-    .fullscreen-menu {
-        position: fixed;
-        top: 0;
-        left: auto;
-        right: 0;
-        width: 50%; /* Adjust menu width */
-        height: 100%;
-        transform: translateX(100%); /* Hide menu off-screen */
-        transition: transform 0.3s ease; /* Smooth animation */
-    }
-
-    .fullscreen-menu.open {
-        transform: translateX(0); /* Bring menu into view */
-    }
-    
-}
-
-/* General improvements for cards on smaller screens */
-@media (max-width: 480px) {
-    body {
-        width: 100%;
-    }
-    .main-header {
-        width: 100%;
-    }
-    .carousel {
-        height: 600px; 
-    }
-
-    .carousel-caption {
-        font-size: 1rem; 
-        bottom: 15%; 
-    }
-    .carousel p{
-        font-size: 1rem; 
-    
-    }
-
-    .card {
-        display: flex;
-        flex-direction: row; 
-        align-items: center; 
-        justify-content: space-between; 
-    }
-
-    .card-body {
-        display: flex;
-        flex-direction: row; /* Brings text and image together */
-        align-items: center; 
-    }
-
-    /* Hide top card image on mobile */
-    .card img.card-img-top {
-        display: none; /* Hide top image for desktop view */
-    }
-
-    /* Place image on left side on mobile */
-    .card img.img-fluid {
-        display: block; /* Shows the image on the left side on mobile */
-        width: 100%; 
-    }
-
-    .card-title {
-        margin: 0; 
-        text-align: left; 
-    }
-
-    .overlay h1,
-    .overlay p {
-    text-align: center;
-    padding: 5px;
-    font-size: 1.1rem;
-    overflow: hidden;
-}
-.event-section{
-    padding: 10px 0px 5px 10px;
+    text-align: left;
+    font-size: 1rem; 
 }
 
 }
