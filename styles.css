@@ -12,8 +12,9 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 
 /* Custom Container */
-.custom-container {
+.custom-container{
     padding: 0;
+    font-size: 1.3rem;
     
 }
 .custom-container img{
@@ -109,7 +110,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 /* Fullscreen Menu */
 .offcanvas-body {
     overflow-y: auto; /* If the menu content overflows, a vertical scrollbar will appear */
-    background-color: rgba(127, 17, 9, 0.9);
+    background-color: #7f1109;
     color: #ffff;
 }
 .offcanvas-body h5{
@@ -198,7 +199,7 @@ font-size: 1.3rem;
     color: white;
 }
 .card-thumbnails{           /*Here for card images */
-    width: 100%;
+    width: 400px;
     height: 250px;
     object-fit: cover;
 }    
@@ -319,7 +320,7 @@ font-size: 1.5rem;
     color: white;
 }
 .btn-generationenfestival{
-    background-color: orange;
+    background-color: #fbb925;
     color: white;
     font-weight: bold;
     font-weight: bold;
@@ -328,7 +329,7 @@ font-size: 1.5rem;
 
 .btn-generationenfestival:hover{
     background-color: white;
-    color: orange;
+    color: #fbb925;
     font-weight: bold;
 }
 
@@ -395,7 +396,7 @@ footer p, footer a {
 
 
 /* Programm html style page */
-.btn-whiteframe{
+.btn-whiteframe, .btn-magazin{
     color: white;
     border: solid 1px #ffff;
     padding: 10px 10px;
@@ -408,7 +409,30 @@ footer p, footer a {
     background-color: #ffff;
     color: #7f1109;
 }
+.btn-magazin:hover{
+    background-color: #ffff;
+    color: #2F528F;
+}
 
+.btn-digitales-menu:hover{
+    background-color: #ffff;
+    color: #50701D;
+}
+
+
+.btn-blackframe{
+    color: #000;
+    border: solid 1px #000;
+    padding: 10px 10px;
+    border-radius: 10px;
+    font-size: 1rem;
+    white-space: normal;
+    background-color: #fbb925;
+}
+.btn-blackframe:hover{
+    background-color: #ffff;
+    color: #fbb925;
+}
 .past-events{
         background-color: #7f1109;
         width: 100%;
@@ -416,8 +440,24 @@ footer p, footer a {
         padding: 10px 0px 5px 50px;
         border-bottom:#ffff solid 2px;
         margin: 0 15px 0 15px;
-    color: #ffff;
-    
+        color: #ffff;
+}
+.btn_festivalevent{
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin: 10px;
+}
+
+.list-text li{
+    font-size: 1.3rem;
+    text-decoration: none;
+    list-style: none;
+    padding: 10px;
+}
+hr{
+    border: black;
+    border-top: #000 solid 3px;
 }
 
 @media (max-width: 768px) {
@@ -449,7 +489,7 @@ footer p, footer a {
         margin: 0; 
         text-align: left; 
     }
-    .btn-whiteframe {
+    .btn-whiteframe, .btn-magazin {
         font-size: 0.8rem; 
     }
 }
