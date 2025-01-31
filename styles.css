@@ -9,38 +9,43 @@ License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 
+/* Genel Değişkenler */
 
 
 /* Custom Container */
-.custom-container{
+.custom-container {
     padding: 0;
-    font-size: 1.3rem;
-    
+    font-size: 1.2rem;
+
 }
-.custom-container img{
+
+.custom-container img {
     max-height: 700px;
     object-fit: cover;
 }
 
 /* Header */
 .main-header {
-    position: sticky; /* always stay on Top */
-    top: 0; 
+    position: sticky;
+    /* always stay on Top */
+    top: 0;
     width: 100%;
-    z-index: 1000; 
+    z-index: 1000;
     background-color: rgba(127, 17, 9, 1);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: top 0.3s ease;
     padding: 10px 0;
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
+
 .header-right {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
+
 .logo {
     font-size: 1.5rem;
     font-weight: bold;
@@ -51,7 +56,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     height: auto;
 }
 
-.menu-hamburger, .search-icon {
+.menu-hamburger,
+.search-icon {
     font-size: 1.8rem;
     color: #ffff;
     display: inline-block;
@@ -59,6 +65,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     cursor: pointer;
     margin: 5px;
 }
+
 .menu-hamburger:hover {
     color: #7f1109;
     background-color: #ffff;
@@ -69,11 +76,11 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 .search-container {
     position: relative;
     display: flex;
-    z-index: 101; 
+    z-index: 101;
 }
 
 .search-icon {
-    transition: color 0.3s; 
+    transition: color 0.3s;
 }
 
 .search-icon:hover {
@@ -97,23 +104,25 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     transition: width 0.5s ease, opacity 0.5s ease, padding 0.5s ease;
     background-color: #ffff;
     color: #000;
-    margin: auto 0; 
+    margin: auto 0;
 }
 
 .search-input.open {
     width: 0px;
     opacity: 1;
     padding: 0 10px;
-    right: 45px; 
+    right: 45px;
 }
 
 /* Fullscreen Menu */
 .offcanvas-body {
-    overflow-y: auto; /* If the menu content overflows, a vertical scrollbar will appear */
+    overflow-y: auto;
+    /* If the menu content overflows, a vertical scrollbar will appear */
     background-color: #7f1109;
     color: #ffff;
 }
-.offcanvas-body h5{
+
+.offcanvas-body h5 {
     background-color: #ffff;
     color: #7f1109;
     padding: 5px;
@@ -121,22 +130,27 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     border: #000 solid 1px;
     border-radius: 5px;
 }
-  /* Body overflow to prevent page scrolling */
+
+/* Body overflow to prevent page scrolling */
 body.offcanvas-open {
-    overflow: hidden; /* No page scrolling when Offcanvas is open */
+    overflow: hidden;
+    /* No page scrolling when Offcanvas is open */
 }
-.nav-item li{
+
+.nav-item li {
     list-style: none;
     text-decoration: none;
     padding: auto;
     font-size: 1.3rem;
 }
-.nav-link a{
+
+.nav-link a {
     color: #ffff;
     text-decoration: none;
 }
-.nav-link a:hover{
-    background-color: #ffff; 
+
+.nav-link a:hover {
+    background-color: #ffff;
     color: #7f1109;
     border-radius: 5px;
     padding: 5px;
@@ -146,69 +160,146 @@ body.offcanvas-open {
 /* Slider */
 
 .carousel {
-    overflow: hidden; /* The page will not show anything else */
+    overflow: hidden;
+    /* The page will not show anything else */
     height: 700px;
 }
+
 .carousel p {
-font-size: 1.3rem;
+    font-size: 1.3rem;
 
 }
 
 .carousel-item img {
-    height: 700px; /* Image fills the slider area */
-    object-fit: cover; /* The image is cropped properly */
-    
+    height: 700px;
+    /* Image fills the slider area */
+    object-fit: cover;
+    /* The image is cropped properly */
+
 }
+
 .carousel-caption {
-    bottom: 7%; /* Header Position*/
-    background-color: rgba(0, 0, 0, 0.4); /* Overlay black */
+    bottom: 7%;
+    /* Header Position*/
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Overlay black */
 
 }
 
 
-
-  
-
-/* Events Area */
-.event-section{
-    background-color: rgb(248, 247, 246);
-    width: 100%;
-    text-align: left;
-    padding: 10px 0px 5px 50px;
-    border-bottom:black solid 2px;
-    margin: 0 15px 0 15px;
-}
-.event-date-ort{
-    font-size: 1.1rem;
-}
-
-.btn-program{
+.btn-program {
     color: white;
     background-color: #7f1109;
     border-radius: 5px;
     padding: 10px 10px;
     cursor: pointer;
     transition: background-color 0.3s;
-    margin:20px 10px ;
+    margin: 20px 10px;
     font-weight: bold;
     font-size: 1.3rem;
     width: 50%;
 }
-.btn-program:hover{
+
+.btn-program:hover {
     background-color: #BD4E4E;
     color: white;
 }
-.card-thumbnails{           /*Here for card images */
-    width: 400px;
-    height: 250px;
+
+.parallax-effect{
+    background-image: url('./img/Offenes\ Höchhus.jpg'); 
+    min-height: 700px; 
+    background-attachment: fixed; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;
+    
+    
+}
+
+.card-group {
+    margin-bottom: 2rem;
+}
+
+.card {
+    border: none !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+.card-thumbnails {
+    padding: 10px;
+    height: 200px;
     object-fit: cover;
-}    
+    transition: transform 0.3s ease;
+}
+
+.card:hover .card-thumbnails {
+    transform: scale(1.05);
+}
+
+.card-body {
+    padding: 1.25rem;
+}
+
+.card-title {
+    font-size: 1.1rem;
+    line-height: 1.4;
+    color: var(--text-color);
+    margin-bottom: 0;
+    transition: color 0.3s ease;
+}
+
+.card:hover .card-title {
+    color: var(--primary-color);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .card-group {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .card {
+        margin-bottom: 1rem;
+    }
+    
+    .card-thumbnails {
+        height: auto;
+    }
+}
+
+
+
+/* Event alani icin */
+.hover-effect { 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.hover-effect:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+.event-date {
+    background-color: var(--primary-color);
+    
+}
+
+
 
 /* Overlay Styling */
 .overlay {
-    background-color: rgba(0, 0, 0, 0.4); /* Overlay black */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Overlay black */
     z-index: 1;
     color: white;
+
 }
 
 /* Make text standout on overlay */
@@ -225,7 +316,8 @@ font-size: 1.3rem;
     z-index: 0;
 }
 
-.btn-bar{           /* here for "Red claim" Buttons */
+.btn-bar {
+    /* here for "Red claim" Buttons */
     color: white;
     background-color: #7f1109;
     padding: 10px 10px;
@@ -234,14 +326,18 @@ font-size: 1.3rem;
     font-size: 1.3rem;
     height: 70px;
     border-radius: 0;
+    margin-top: 0px;
     margin-bottom: 30px;
 }
-.btn-bar:hover{
+
+.btn-bar:hover {
     background-color: #BD4E4E;
     color: white;
-    
+
 }
-.btn-bar-blue{      /* here for Blue "claim" Buttons */
+
+.btn-bar-blue {
+    /* here for Blue "claim" Buttons */
     color: white;
     background-color: #2F528F;
     padding: 10px 10px;
@@ -253,73 +349,77 @@ font-size: 1.3rem;
     margin-bottom: 30px;
 }
 
-.btn-bar-blue:hover{
+.btn-bar-blue:hover {
     background-color: #708CBC;
     color: white;
 }
 
-.btn-program-blue{     /* Here for Blue program button */
+.btn-program-blue {
+    /* Here for Blue program button */
     color: white;
     background-color: #2F528F;
     border-radius: 5px;
     padding: 10px 10px;
     cursor: pointer;
     transition: background-color 0.3s;
-    margin:20px 10px ;
+    margin: 20px 10px;
     font-weight: bold;
     font-size: 1.3rem;
     width: 50%;
 }
-.btn-program-blue:hover{
+
+.btn-program-blue:hover {
     background-color: #708CBC;
     color: #ffff;
 }
-.img-header{
+
+.img-header {
     object-fit: cover;
     width: 100%;
     max-height: 700px;
 }
 
-.paragraph-img{
-    font-size: 1.3rem;
-    margin: 30px;
+
+
+.btn-Digitales-type1 {
+    background-color: #50701D;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
 }
 
-.btn-Digitales-type1{
-background-color: #50701D;
-color: white;
-font-weight: bold;
-font-size: 1.5rem;
-}
-
-.btn-Digitales-type1:hover{
+.btn-Digitales-type1:hover {
     background-color: #B3CD89;
     color: white;
-    }
+}
 
-.btn-Digitales-type2{
+.btn-Digitales-type2 {
     background-color: white;
     color: #50701D;
     font-weight: bold;
     margin: 20px;
 }
 
-.btn-Digitales-type2:hover{
+.btn-Digitales-type2:hover {
     background-color: #B3CD89;
     color: white;
-    }
-
-.overlay-green{
-        background-color: rgba(0, 100, 0, 0.4); /* Overlay Green */
-        z-index: 1;
-        color: white;
 }
-.overlay-yellow{
-    background-color: rgb(248, 228, 3, 0.4); /* Overlay Yellow */
+
+.overlay-green {
+    background-color: rgba(0, 100, 0, 0.4);
+    /* Overlay Green */
     z-index: 1;
     color: white;
 }
-.btn-generationenfestival{
+
+.overlay-yellow {
+    background-color: rgb(248, 228, 3, 0.4);
+    /* Overlay Yellow */
+    z-index: 1;
+    color: white;
+}
+
+.btn-generationenfestival {
     background-color: #fbb925;
     color: white;
     font-weight: bold;
@@ -327,26 +427,28 @@ font-size: 1.5rem;
     font-size: 1.5rem;
 }
 
-.btn-generationenfestival:hover{
+.btn-generationenfestival:hover {
     background-color: white;
     color: #fbb925;
     font-weight: bold;
 }
 
-.overlay-red{
-    background-color: rgba(255, 0, 0, 0.2); /* Overlay Red */
+.overlay-red {
+    background-color: rgba(255, 0, 0, 0.2);
+    /* Overlay Red */
     z-index: 1;
     color: white;
 }
 
-.btn-red{
+.btn-red {
     background-color: #7f1109;
     color: white;
     font-weight: bold;
     font-weight: bold;
     font-size: 1.5rem;
 }
-.btn-red:hover{
+
+.btn-red:hover {
     background-color: white;
     color: #7f1109;
     font-weight: bold;
@@ -358,104 +460,151 @@ font-size: 1.5rem;
     width: 100%;
 }
 
-.img-footer-logo{
-    max-width: 50px; /* Icon size */
+.img-footer-logo {
+    max-width: 50px;
+    /* Icon size */
     height: auto;
     margin-bottom: 5px;
 }
 
-.logo-partners{
-    max-width: 100%; /* Supporter logos size */
+.logo-partners {
+    max-width: 100%;
+    /* Supporter logos size */
     height: auto;
 }
+
 footer h5 {
     font-size: 1.25rem;
     font-weight: bold;
 }
 
-footer p, footer a {
+footer p,
+footer a {
     font-size: 0.9rem;
     line-height: 1.5;
     text-decoration: none;
     color: white;
 }
-.footer-bottom{
-    background-color: #7f1109; 
-    width: 100%; 
-    color: white; 
+
+.footer-bottom {
+    background-color: #7f1109;
+    width: 100%;
+    color: white;
     padding: 20px;
 }
-.footer-bottom a{
+
+.footer-bottom a {
     text-decoration: none;
     color: white;
 }
-.social-icon img:hover{
+
+.social-icon img:hover {
     transform: scale(1.1);
     transition: transform 0.3s;
 }
 
 
 /* Programm html style page */
-.btn-whiteframe, .btn-magazin{
+.btn-whiteframe,
+.btn-magazin {
     color: white;
     border: solid 1px #ffff;
     padding: 10px 10px;
     border-radius: 10px;
     cursor: pointer;
     font-size: 1rem;
-    white-space: normal; 
+    white-space: normal;
 }
-.btn-whiteframe:hover{
+
+.btn-whiteframe:hover {
     background-color: #ffff;
     color: #7f1109;
 }
-.btn-magazin:hover{
+
+.btn-magazin:hover {
     background-color: #ffff;
     color: #2F528F;
 }
 
-.btn-digitales-menu:hover{
+.btn-digitales-menu:hover {
     background-color: #ffff;
     color: #50701D;
 }
 
+/* Festival Pages */
 
-.btn-blackframe{
+.btn-outline-dark {
+    border: 2px solid #000;
+    font-weight: 500;
+    background-color: transparent;
+    color: #000;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-dark:hover {
+    background-color: #000;
+    color: #fff;
+    border-color: #000;
+}
+/* .btn-blackframe {
     color: #000;
     border: solid 1px #000;
     padding: 10px 10px;
     border-radius: 10px;
-    font-size: 1rem;
+    font-size: 0.8rem;
     white-space: normal;
     background-color: #fbb925;
-}
-.btn-blackframe:hover{
-    background-color: #ffff;
-    color: #fbb925;
-}
-.past-events{
-        background-color: #7f1109;
-        width: 100%;
-        text-align: left;
-        padding: 10px 0px 5px 50px;
-        border-bottom:#ffff solid 2px;
-        margin: 0 15px 0 15px;
-        color: #ffff;
-}
-.btn_festivalevent{
-    color: white;
-    font-weight: bold;
-    font-size: 1.1rem;
-    margin: 10px;
+    min-height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
 }
 
-.list-text li{
+.btn-blackframe:hover {
+    background-color: #ffff;
+    color: #fbb925;
+    border-color: #fbb925;
+} */
+
+.past-events {
+    background-color: #7f1109;
+    width: 100%;
+    text-align: left;
+    padding: 10px 0px 5px 50px;
+    border-bottom: #ffff solid 2px;
+
+    color: #ffff;
+}
+
+.btn-festivalevent {
+    color: white;
+    font-size: 0.8rem;
+    margin: 10px;
+}
+.festival-event-cards{
+    border: none !important; 
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1); 
+    margin-bottom: 1.5rem; 
+    transition: transform 0.3s ease, 
+    box-shadow 0.3s ease; 
+    overflow: hidden;
+}
+.img-festival-program{
+    height: 200px; 
+    object-fit: cover;
+}
+.list-text li {
     font-size: 1.3rem;
     text-decoration: none;
     list-style: none;
     padding: 10px;
 }
-hr{
+
+
+
+hr {
     border: black;
     border-top: #000 solid 3px;
 }
@@ -463,109 +612,121 @@ hr{
 @media (max-width: 768px) {
     .card {
         display: flex;
-        flex-direction: column; 
-        align-items: center; 
-        justify-content: space-between; 
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
     }
-    
+
     .card-body {
         display: flex;
-        flex-direction: row; /* Brings text and image together */
-        align-items: center; 
+        flex-direction: row;
+        /* Brings text and image together */
+        align-items: center;
     }
-    
+
     /* Hide top card image on mobile */
     .card img.card-img-top {
-        display: none; /* Hide top image for desktop view */
+        display: none;
+        /* Hide top image for desktop view */
     }
-    
+
     /* Place image on left side on mobile */
     .card img.img-fluid {
-        display: block; /* Shows the image on the left side on mobile */
-        width: 100%; 
+        display: block;
+        /* Shows the image on the left side on mobile */
+        width: 100%;
     }
-    
+
     .card-title {
-        margin: 0; 
-        text-align: left; 
+        margin: 0;
+        text-align: left;
     }
-    .btn-whiteframe, .btn-magazin {
-        font-size: 0.8rem; 
+
+    .btn-whiteframe,
+    .btn-magazin {
+        font-size: 0.8rem;
     }
 }
 
 @media (min-width: 576px) and (max-width: 768px) {
     .card {
         display: flex;
-        flex-direction: column; /* Ensure vertical stacking */
+        flex-direction: column;
+        /* Ensure vertical stacking */
         align-items: center;
         justify-content: center;
-        margin: 10px auto; /* Add spacing between cards */
-        
+        margin: 10px auto;
+        /* Add spacing between cards */
+
     }
 
     .card-body {
         display: flex;
-        flex-direction: column; /* Stack title and image */
+        flex-direction: column;
+        /* Stack title and image */
         text-align: center;
         padding: 10px;
     }
 
 
     .card-title {
-        margin: 0; 
+        margin: 0;
         font-size: 1rem;
     }
 }
 
 @media (max-width: 480px) {
-    
+
     .carousel {
-        height: 600px; 
+        height: 600px;
     }
 
     .carousel-caption {
-        font-size: 1rem; 
-        bottom: 15%; 
-    }
-    .carousel p{
-        font-size: 1rem; 
-    
+        font-size: 1rem;
+        bottom: 15%;
     }
 
+    .carousel p {
+        font-size: 1rem;
 
-.event-section{
-    padding: 10px 0px 5px 10px;
-}
-.card {
-    display: flex;
-    flex-direction: row; 
-    align-items: center; 
-    justify-content: space-between; 
-}
-
-.card-body {
-    display: flex;
-    flex-direction: row; /* Brings text and image together */
-    align-items: center; 
-}
-
-/* Hide top card image on mobile */
-.card img.card-img-top {
-    display: none; /* Hide top image for desktop view */
-}
-
-/* Place image on left side on mobile */
-.card img.img-fluid {
-    display: block; /* Shows the image on the left side on mobile */
-    width: 100%; 
-}
-
-.card-title {
-    margin: 0; 
-    text-align: left;
-    font-size: 1rem; 
-}
-}
+    }
 
 
+    .event-section {
+        padding: 10px 0px 5px 10px;
+    }
+
+    .card {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .card-body {
+        display: flex;
+        flex-direction: row;
+        /* Brings text and image together */
+        align-items: center;
+    }
+
+    /* Hide top card image on mobile */
+    .card img.card-img-top {
+        display: none;
+        /* Hide top image for desktop view */
+    }
+
+    /* Place image on left side on mobile */
+    .card img.img-fluid {
+        display: block;
+        /* Shows the image on the left side on mobile */
+        width: 100%;
+    }
+
+    .card-title {
+        margin: 0;
+        text-align: left;
+        font-size: 1rem;
+    }
+
+}
