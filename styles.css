@@ -67,8 +67,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 }
 
 .menu-hamburger:hover {
-    color: #7f1109;
-    background-color: #ffff;
+    /* color: #7f1109;
+    background-color: #ffff; */
     transform: background-color;
     transform: scale(1.1);
 }
@@ -84,8 +84,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 }
 
 .search-icon:hover {
-    color: #7f1109;
-    background-color: #ffff;
+    /* color: #7f1109;
+    background-color: #ffff; */
     transform: background-color;
     transform: scale(1.2);
     border-radius: 5px;
