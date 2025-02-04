@@ -33,60 +33,60 @@ searchInput.addEventListener('blur', function () {
 
 
 
-/* Here for Bootstrap slider stop with mauseover*/
-  var myCarousel = document.getElementById('carouselExampleCaptions');
-  var carousel = new bootstrap.Carousel(myCarousel, {
-    interval: 2000, // Automatic switching time (2 seconds)
-    ride: 'carousel' // Start automatically
-  });
+// /* Here for Bootstrap slider stop with mauseover*/
+//   var myCarousel = document.getElementById('carouselExampleCaptions');
+//   var carousel = new bootstrap.Carousel(myCarousel, {
+//     interval: 2000, // Automatic switching time (2 seconds)
+//     ride: 'carousel' // Start automatically
+//   });
 
-  // Stopping on mouse hover
-  myCarousel.addEventListener('mouseenter', function () {
-    carousel.pause(); // Stop automatic switching
-  });
+//   // Stopping on mouse hover
+//   myCarousel.addEventListener('mouseenter', function () {
+//     carousel.pause(); // Stop automatic switching
+//   });
 
-  // Restart when mouse is separated
-  myCarousel.addEventListener('mouseleave', function () {
-    carousel.cycle(); // Start automatic migration
-  });
-
-
+//   // Restart when mouse is separated
+//   myCarousel.addEventListener('mouseleave', function () {
+//     carousel.cycle(); // Start automatic migration
+//   });
 
 
-/* Card function */
-function generateCards(containerId, cardsData) {
-  const cardContainer = document.getElementById(containerId);
-  if (!cardContainer) {
-      console.error(`Belirtilen container ID'si bulunamadı: ${containerId}`);
-      return;
-  }
 
-  cardsData.forEach(cardData => {
-      const cardDiv = document.createElement('div');
-      cardDiv.classList.add('card', 'mb-3');
 
-      const cardImg = document.createElement('img');
-      cardImg.src = cardData.imgSrc;
-      cardImg.classList.add('card-img-top', 'card-thumbnails', 'd-md-block', 'd-none');
-      cardDiv.appendChild(cardImg);
+// /* Card function */
+// function generateCards(containerId, cardsData) {
+//   const cardContainer = document.getElementById(containerId);
+//   if (!cardContainer) {
+//       console.error(`Belirtilen container ID'si bulunamadı: ${containerId}`);
+//       return;
+//   }
 
-      const cardBodyDiv = document.createElement('div');
-      cardBodyDiv.classList.add('card-body', 'd-md-block', 'd-flex', 'align-items-center');
+//   cardsData.forEach(cardData => {
+//       const cardDiv = document.createElement('div');
+//       cardDiv.classList.add('card', 'mb-3');
 
-      const cardMobileImg = document.createElement('img');
-      cardMobileImg.src = cardData.imgSrc;
-      cardMobileImg.classList.add('img-fluid', 'd-md-none', 'me-3');
-      cardMobileImg.style.width = "200px";
-      cardMobileImg.style.height = "auto";
-      cardBodyDiv.appendChild(cardMobileImg);
+//       const cardImg = document.createElement('img');
+//       cardImg.src = cardData.imgSrc;
+//       cardImg.classList.add('card-img-top', 'card-thumbnails', 'd-md-block', 'd-none');
+//       cardDiv.appendChild(cardImg);
 
-      const cardTitle = document.createElement('h5');
-      cardTitle.classList.add('card-title');
-      cardTitle.textContent = cardData.title;
-      cardBodyDiv.appendChild(cardTitle);
+//       const cardBodyDiv = document.createElement('div');
+//       cardBodyDiv.classList.add('card-body', 'd-md-block', 'd-flex', 'align-items-center');
 
-      cardDiv.appendChild(cardBodyDiv);
+//       const cardMobileImg = document.createElement('img');
+//       cardMobileImg.src = cardData.imgSrc;
+//       cardMobileImg.classList.add('img-fluid', 'd-md-none', 'me-3');
+//       cardMobileImg.style.width = "200px";
+//       cardMobileImg.style.height = "auto";
+//       cardBodyDiv.appendChild(cardMobileImg);
 
-      cardContainer.appendChild(cardDiv);
-  });
-}
+//       const cardTitle = document.createElement('h5');
+//       cardTitle.classList.add('card-title');
+//       cardTitle.textContent = cardData.title;
+//       cardBodyDiv.appendChild(cardTitle);
+
+//       cardDiv.appendChild(cardBodyDiv);
+
+//       cardContainer.appendChild(cardDiv);
+//   });
+// }

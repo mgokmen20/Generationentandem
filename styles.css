@@ -216,9 +216,7 @@ body.offcanvas-open {
     
 }
 
-.card-group {
-    margin-bottom: 2rem;
-}
+
 
 .card {
     border: none !important;
@@ -258,22 +256,6 @@ body.offcanvas-open {
 
 .card:hover .card-title {
     color: var(--primary-color);
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    .card-group {
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .card {
-        margin-bottom: 1rem;
-    }
-    
-    .card-thumbnails {
-        height: auto;
-    }
 }
 
 
@@ -436,8 +418,9 @@ body.offcanvas-open {
 .overlay-red {
     background-color: rgba(255, 0, 0, 0.2);
     /* Overlay Red */
-    z-index: 1;
+    z-index: 2;
     color: white;
+    pointer-events: none;
 }
 
 .btn-red {
@@ -446,6 +429,7 @@ body.offcanvas-open {
     font-weight: bold;
     font-weight: bold;
     font-size: 1.5rem;
+    
 }
 
 .btn-red:hover {
@@ -574,7 +558,6 @@ footer a {
     text-align: left;
     padding: 10px 0px 5px 50px;
     border-bottom: #ffff solid 2px;
-
     color: #ffff;
 }
 
@@ -602,78 +585,12 @@ footer a {
     padding: 10px;
 }
 
-
-
 hr {
     border: black;
     border-top: #000 solid 3px;
 }
 
-@media (max-width: 768px) {
-    .card {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-    }
 
-    .card-body {
-        display: flex;
-        flex-direction: row;
-        /* Brings text and image together */
-        align-items: center;
-    }
-
-    /* Hide top card image on mobile */
-    .card img.card-img-top {
-        display: none;
-        /* Hide top image for desktop view */
-    }
-
-    /* Place image on left side on mobile */
-    .card img.img-fluid {
-        display: block;
-        /* Shows the image on the left side on mobile */
-        width: 100%;
-    }
-
-    .card-title {
-        margin: 0;
-        text-align: left;
-    }
-
-    .btn-whiteframe,
-    .btn-magazin {
-        font-size: 0.8rem;
-    }
-}
-
-@media (min-width: 576px) and (max-width: 768px) {
-    .card {
-        display: flex;
-        flex-direction: column;
-        /* Ensure vertical stacking */
-        align-items: center;
-        justify-content: center;
-        margin: 10px auto;
-        /* Add spacing between cards */
-
-    }
-
-    .card-body {
-        display: flex;
-        flex-direction: column;
-        /* Stack title and image */
-        text-align: center;
-        padding: 10px;
-    }
-
-
-    .card-title {
-        margin: 0;
-        font-size: 1rem;
-    }
-}
 
 @media (max-width: 480px) {
 
@@ -695,38 +612,6 @@ hr {
     .event-section {
         padding: 10px 0px 5px 10px;
     }
-
-    .card {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-    .card-body {
-        display: flex;
-        flex-direction: row;
-        /* Brings text and image together */
-        align-items: center;
-    }
-
-    /* Hide top card image on mobile */
-    .card img.card-img-top {
-        display: none;
-        /* Hide top image for desktop view */
-    }
-
-    /* Place image on left side on mobile */
-    .card img.img-fluid {
-        display: block;
-        /* Shows the image on the left side on mobile */
-        width: 100%;
-    }
-
-    .card-title {
-        margin: 0;
-        text-align: left;
-        font-size: 1rem;
-    }
-
 }
+
+
