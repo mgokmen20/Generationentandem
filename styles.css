@@ -14,7 +14,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 /* Custom Container */
 .custom-container {
-    padding: 0;
+    padding: 0px 5px 0px 5px;
     font-size: 1.2rem;
 
 }
@@ -118,17 +118,14 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 .offcanvas-body {
     overflow-y: auto;
     /* If the menu content overflows, a vertical scrollbar will appear */
-    background-color: #7f1109;
-    color: #ffff;
+    background-color: #f8f9fa;;
+    color: #000;
 }
 
 .offcanvas-body h5 {
-    background-color: #ffff;
     color: #7f1109;
     padding: 5px;
     margin: 15px;
-    border: #000 solid 1px;
-    border-radius: 5px;
 }
 
 /* Body overflow to prevent page scrolling */
@@ -145,7 +142,7 @@ body.offcanvas-open {
 }
 
 .nav-link a {
-    color: #ffff;
+    color: #000;
     text-decoration: none;
 }
 
@@ -430,6 +427,7 @@ body.offcanvas-open {
     font-weight: bold;
     font-size: 1.5rem;
     
+    
 }
 
 .btn-red:hover {
@@ -614,4 +612,9 @@ hr {
     }
 }
 
-
+.img-user{
+    width: 40px; 
+    height: 40px; 
+    margin-left: 10px; 
+    
+}
